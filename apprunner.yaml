@@ -1,0 +1,19 @@
+version: 1.0
+runtime: python-3.8
+
+app:
+  commands:
+    # Set up the environment
+    - pip install -r requirements.txt
+
+    # Run the Python application
+    - python setup.py
+
+  environment:
+    # Add any environment variables required by your application
+    - VARIABLE_NAME=value
+    - ANOTHER_VARIABLE=another_value
+
+services:
+  - name: setup.py
+    source: SAP-archive/PyHDB/
